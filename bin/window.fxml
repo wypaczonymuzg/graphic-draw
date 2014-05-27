@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="577.0001220703125" prefWidth="995.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ImageView fx:id="imgView" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#msImgViewClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+    <Button fx:id="btnResize" layoutX="774.0" layoutY="28.0" mnemonicParsing="false" onAction="#btResize" text="Draw Circle" />
+    <TextField fx:id="txtRadius" layoutX="774.0" layoutY="57.0" prefWidth="97.0" text="50" />
+    <TextField fx:id="txtLine" layoutX="774.0" layoutY="89.0" prefWidth="97.0" text="1" />
+    <Text layoutX="880.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="radius" />
+    <Text layoutX="880.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="line" />
+    <Button fx:id="btnClear" layoutX="774.0" layoutY="194.0" mnemonicParsing="false" onAction="#btClear" text="clear" />
+    <TextField fx:id="txtX" layoutX="774.0" layoutY="123.0" prefWidth="68.0" text="250" />
+    <TextField fx:id="txtY" layoutX="774.0" layoutY="152.0" prefWidth="68.0" text="250" />
+    <Text layoutX="846.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="y" />
+    <Text layoutX="844.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" />
+    <TextField fx:id="txtP1X" layoutX="774.0" layoutY="231.0" prefWidth="68.0" />
+    <TextField fx:id="txtP1Y" layoutX="854.0" layoutY="231.0" prefWidth="68.0" />
+    <TextField fx:id="txtP2X" layoutX="774.0" layoutY="262.0" prefWidth="68.0" />
+    <TextField fx:id="txtP2Y" layoutX="854.0" layoutY="262.0" prefWidth="68.0" />
+    <Text layoutX="935.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p1 coord" />
+    <Text layoutX="935.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="p2 coord" />
+    <RadioButton fx:id="radioLine" layoutX="774.0" layoutY="310.0" mnemonicParsing="false" selected="true" text="line">
+      <toggleGroup>
+        <ToggleGroup fx:id="mode" />
+      </toggleGroup>
+    </RadioButton>
+    <RadioButton fx:id="radioCircle" layoutX="774.0" layoutY="334.0" mnemonicParsing="false" text="circle" toggleGroup="$mode" />
+    <RadioButton fx:id="radioFill" layoutX="774.0" layoutY="358.0" mnemonicParsing="false" text="fill" toggleGroup="$mode" />
+    <CheckBox fx:id="checkClip" layoutX="844.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleCheckbox" text="clip" />
+  </children>
+</AnchorPane>
